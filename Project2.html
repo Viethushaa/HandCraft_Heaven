@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handcraft Haven</title>
+    
+    <!-- Materialize CSS (Material UI Styling) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    
+    <!-- Google Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <style>
+        /* Default Light Theme */
+        body { background-color: #fff; color: #333; transition: 0.3s; }
+        .primary-color { background-color: #8e44ad !important; } /* Purple */
+        .secondary-color { background-color: #e67e22 !important; } /* Orange */
+        .text-primary { color: #8e44ad !important; }
+        .text-secondary { color: #e67e22 !important; }
+        .btn-custom { background-color: #8e44ad; }
+        .btn-custom:hover { background-color: #6c3483; }
+        .card { padding: 15px; transition: 0.3s; }
+
+        /* Dark Mode Styling */
+        body.dark-mode { background-color: #121212; color: #f5f5f5; }
+        .dark-mode .primary-color { background-color: #333 !important; }
+        .dark-mode .secondary-color { background-color: #555 !important; }
+        .dark-mode .card { background-color: #222; color: #f5f5f5; }
+        .dark-mode .btn-custom { background-color: #6c3483; }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="primary-color">
+        <div class="nav-wrapper container">
+            <a href="#" class="brand-logo">Handcraft Haven</a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="#about">About</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li>
+                    <a href="#" id="theme-toggle">
+                        <i class="material-icons">brightness_6</i> <!-- Light/Dark Mode Icon -->
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="section primary-color white-text center">
+        <h3>Discover Unique Handcrafted Creations</h3>
+        <p>Beautiful, handmade crafts made with love.</p>
+        <a href="#products" class="btn btn-custom">Shop Now</a>
+    </div>
+
+    <!-- About Section -->
+    <div id="about" class="container">
+        <h4 class="text-primary">About Us</h4>
+        <div class="card">
+            <p>We create handmade crafts inspired by traditional artistry, blending creativity with passion. Every item is crafted with care and love to bring you unique, high-quality designs.</p>
+        </div>
+    </div>
+
+    <!-- Products Section -->
+    <div id="products" class="container">
+        <h4 class="text-primary">Our Products</h4>
+        <div class="row">
+            <div class="col s12 m4">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="img1.jpg">
+                    </div>
+                    <div class="card-content center">
+                        <h5 class="text-secondary">Handmade Pottery</h5>
+                        <p>Beautiful ceramic designs crafted with precision.</p>
+                        <a class="btn btn-custom">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m4">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="image2.jpg">
+                    </div>
+                    <div class="card-content center">
+                        <h5 class="text-secondary">Wooden Crafts</h5>
+                        <p>Artistic wooden sculptures and decorations.</p>
+                        <a class="btn btn-custom">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m4">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="image3.jpg">
+                    </div>
+                    <div class="card-content center">
+                        <h5 class="text-secondary">Handmade Jewelry</h5>
+                        <p>Elegant, handcrafted accessories with a personal touch.</p>
+                        <a class="btn btn-custom">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+<div id="contact" class="container">
+    <h4 class="text-primary">Get in Touch</h4>
+    <div class="card">
+        <form>
+            <div class="input-field">
+                <input type="text" id="name">
+                <label for="name">Your Name</label>
+            </div>
+            <div class="input-field">
+                <input type="email" id="email">
+                <label for="email">Your Email</label>
+            </div>
+            <div class="input-field">
+                <textarea id="message" class="materialize-textarea"></textarea>
+                <label for="message">Your Message</label>  <!-- ✅ Fixed Placement -->
+            </div>
+            <button type="submit" class="btn btn-custom">Send Message</button>
+        </form>
+    </div>
+</div>
+
+
+    <!-- Footer -->
+    <footer class="secondary-color white-text center">
+        <p>&copy; 2025 Handcraft Haven. All rights reserved.</p>
+    </footer>
+
+    <!-- Materialize JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!-- Dark Mode Toggle Script -->
+    <script>
+        document.getElementById("theme-toggle").addEventListener("click", function () {
+            document.body.classList.toggle("dark-mode");
+
+            // Save preference in localStorage
+            if (document.body.classList.contains("dark-mode")) {
+                localStorage.setItem("theme", "dark");
+            } else {
+                localStorage.setItem("theme", "light");
+            }
+        });
+
+        // Load theme preference
+        window.onload = function () {
+            if (localStorage.getItem("theme") === "dark") {
+                document.body.classList.add("dark-mode");
+            }
+        };
+    </script>
+
+</body>
+</html>
