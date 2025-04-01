@@ -1,21 +1,23 @@
-Handcraft Haven is a beautifully designed online store showcasing unique handmade crafts. It features a responsive layout, dark mode toggle, and a product catalog using Materialize CSS for a modern and sleek UI.
+# Handcraft Haven
 
-Features
+Handcraft Haven is an online store dedicated to showcasing unique handmade crafts. Built with Materialize CSS, it offers a sleek, modern UI with a responsive design, dark mode toggle, and a product catalog to enhance the shopping experience.
 
-Fully Responsive Design using Materialize CSS.
+# Features
+
+Fast & Responsive Design using **Materialize CSS**.
 
 Dark Mode Toggle with localStorage support.
 
-Product Showcase with detailed descriptions.
+Handmade Product Showcase with descriptions and images.
 
-Contact Form for user inquiries.
+Contact Form for user inquiries and feedback.
 
-Smooth Navigation with Material UI components.
+Smooth Navigation with **Material UI components**.
 
-Technologies Used
+# Technologies Used
 
 HTML5 - Structuring the webpage.
 
 CSS3 (Materialize CSS, Custom Styling) - Enhancing UI/UX.
 
-JavaScript (ES6) - Implementing interactive features like Dark Mode toggle.
+JavaScript (ES6) - Interactive features like Dark Mode toggle.
